@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Greeting Card</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/loader.css">
+</head>
+<body>
+    <div class="loading-screen">
+            <div class="🤚">
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="🌴"></div>		
+                <div class="👍"></div>
+            </div>
+    </div>
+
+    <div class="content">
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide video-card">
+<!--
+                <video id="myVideo" muted autoplay playsinline loop oncontextmenu="return false" preload="auto">
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+                <img id="fallbackGif" src="assets/fallback.gif" style="display: none;" alt="Fallback animation"> 
+-->                <div class="swipe-hint">← Swipe</div>
+            </div>
+
+            <!-- Letter Card -->
+            <div class="swiper-slide letter-card">
+                <div class="letter-content">
+                    <p class="receiver-line">Hey <span id="receiver-name">Friend</span>,</p>
+                    <div id="letter-body" class="letter-body">
+                        Wishing you a blessed Eid filled with joy and prosperity!
+                    </div>
+                    <div id="read-more" class="read-more">...read more</div>
+                    <p class="closing-line">Yours,</p>
+                    <p id="sender-name" class="signature">Sender</p>
+                </div>
+                <div class="swipe-hint">← Swipe</div>
+            </div>
+
+            <!-- Payment Card -->
+            <div class="swiper-slide payment-card">
+                <div class="payment-content">
+                    <h3>Eid Mubarak!</h3>
+                        <div class="payment-options">
+                            <div id="bkash-option" class="payment-option">
+                                <div class="payment-icon"><i><img src="assets/ico/bkash.svg" alt=""></i></div>
+                                <h4>ঈদের চাঁদ আকাশে,<br> সালামি দিন বিকাশে</h4>
+                                <div class="payment-number-container">
+                                    <input type="text" id="bkash-number" class="payment-number-input" readonly>
+                                    <button class="copy-btn" onclick="copyPaymentNumber('bkash-number')">Copy</button>
+                                </div>
+                            </div>
+                            <div id="nagad-option" class="payment-option">
+                                <div class="payment-icon"><i><img src="assets/ico/nagad.svg" alt=""></i></div>
+                                <h4>Nagad</h4>
+                                <div class="payment-number-container">
+                                    <input type="text" id="nagad-number" class="payment-number-input" readonly>
+                                    <button class="copy-btn" onclick="copyPaymentNumber('nagad-number')">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="../../" target="_blank" class="send-button">Make Card...</a>
+                    <div class="footer">
+                        <a href="#" class="contact-link">contact developer</a>
+                        <p class="copyright">© Raffu 2025. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="assets/confetti.js"></script>
+    <script src="assets/script.js"></script>
+    <script>
+            const video = document.getElementById('myVideo');
+            const gif = document.getElementById('fallbackGif');
+
+            // If video can't be loaded or played
+            function showGifFallback() {
+                video.style.display = 'none';
+                gif.style.display = 'block';
+            }
+
+            // Extra check: fallback if video fails to start
+            video.addEventListener('error', showGifFallback);
+            video.addEventListener('stalled', showGifFallback);
+    </script>
+</body>
+</html>

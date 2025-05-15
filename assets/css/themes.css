@@ -1,0 +1,69 @@
+/* Color Variables */
+:root {
+    --moonlight-lilac: #6A5ACD;
+    --eid-gold: #020040;
+    --check: #60000E;
+    --mint-mist: #4B8B6D;
+    --blush-rose: #C9738E;
+    --deep-plum: #301934;
+    --sky-dream-blue: #3A6B8A;
+    --pure-white: #1A1A1A;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fleur+De+Leah&display=swap'); 
+  @font-face {
+    font-family: 'Typewriter';
+    src: url('/assets/fonts/typewriter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'head';
+    src: url('/assets/fonts/TheBencolenVintage.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Glassmorphism Effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  /* Button Gradients */
+  .btn-gradient {
+    background: linear-gradient(135deg, var(--blush-rose), var(--mint-mist));
+    color: var(--deep-plum);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, var(--eid-gold), var(--blush-rose));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Text Shadows */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(246, 201, 14, 0.5);
+  }
+  
+  /* Section Transitions */
+  .section-transition {
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  
+  
+  .magicline{
+    background: linear-gradient(45deg, #9C27B0, #E91E63, #FF9800);
+    text-shadow: 0 0 5px rgba(150, 127, 0, 0.3);
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;  
+    -webkit-text-fill-color: transparent; /* Makes text take gradient */
+    color: transparent; /* Fallback for some browsers */
+    font-weight: bold;
+  }

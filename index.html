@@ -1,269 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eid Card Genaretor</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  <link rel="stylesheet" href="assets/css/themes.css">
-  <link rel="icon" href="assets/ico/icon.svg" type="image/svg+xml">
-
-  <!-- Open Graph (Facebook, Instagram, WhatsApp, Telegram) -->
-  <meta property="og:title" content="Eid Card Maker">
-  <meta property="og:description" content="Create Your Own Digital Card & Share">
-  <meta property="og:image" content="https://raw.githubusercontent.com/eidddi/assets/refs/heads/main/hfb.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Eid Card Maker">
-
-  <!-- Twitter Card (Optional, but helps Twitter & some apps) -->
-  <meta name="twitter:description" content="Create Your Own Digital Card">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/eidddi/assets/refs/heads/main/hfb.jpg">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Launcher</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --secondary-dark: #0d9f6e;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --footer-bg: #020617;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            width: 100%;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        footer {
+            width: 100%;
+            background: var(--footer-bg);
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: #a5b4fc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
 </head>
 <body>
-  <div class="app-container">
-    <!-- Loading Animation -->
-    <div class="loading-animation" id="loading">
-      <div class="moon"></div>
-      <div class="stars"></div>
+    <div class="container">
+        <div class="card">
+            <a href="adha/index.html" class="btn btn-primary">
+                Eid Card Generator
+            </a>
+            <a href="#" class="btn btn-secondary">
+                Tic-Tac-Toe
+            </a>
+        </div>
     </div>
-
-    <!-- Main App Sections -->
-    <main class="main-content">
-      <!-- Section 1: Enter Details -->
-      <section class="card-section active" id="section1">
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 33%"></div>
-          <span class="progress-label">Step 1 of 3</span>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <a href="mailto:contact@letter-box.com">contact@letter-box.com</a>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="https://letter-box.com" target="_blank">letter-box.com</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Letter-Box. All rights reserved.
+            </div>
         </div>
-        
-        <h2 class="section-title">Create & Share the <span class="magicline">Magic</span></h2>
-        
-        <form class="eid-form" id="detailsForm">
-          
-          <div class="form-group">
-            <input type="text" id="recipientName" required>
-            <label for="recipientName">Receiver <span><small>(Hey/Dear ___,)</small></span></label>
-            <span class="bar"></span>
-          </div>
-          
-          <div class="form-group ltr" style="position: relative;">
-            <textarea id="message" required maxlength="550"></textarea>
-            <label for="message">Letter Body <span><small>(Eid Mubarak, ___)</small></span></label>
-            <span class="bar"></span>
-            <div class="char-counter"><span id="charCount">0</span>/550</div>
-
-            <!-- Change button type to "button" to prevent form submission -->
-            <button type="button" id="generateAI" title="Generate Eid Wish" class="ai-generator-btn">
-              <span class="ai-icon"><i class="fa-solid fa-robot"></i></span>
-              <span class="ai-loading" style="display: none;">...</span>
-            </button>
-          </div>
-
-
-          <div class="form-group">
-            <input type="text" id="senderName" required>
-            <label for="senderName">Sender <span><small>(Yours ___.)</small></span></label>
-            <span class="bar"></span>
-          </div>
-          
-
-          
-          <button type="button" class="btn-next" id="nextToDesign">Next <i class="fas fa-arrow-right"></i></button>
-        </form>
-        
-        <div class="emoji-background">
-          <span>🌙</span>
-          <span>🎈</span>
-          <span>🌟</span>
-          <span>🦋</span>
-          <span>🌠</span>
-        </div>
-      </section>
-      
-      <!-- Section 2: Design & Payment -->
-        <section class="card-section" id="section2">
-            <div class="progress-container">
-            <div class="progress-bar" style="width: 66%"></div>
-            <span class="progress-label">Step 2 of 3</span>
-            </div>
-            
-            <h2 class="section-title">Design Your Card</h2>
-            
-            <div class="design-container glass-card">
-            <h3>Choose a Style</h3>
-            <div class="card-styles">
-              <div class="style-container">
-                    <button type="button" class="style-option" data-style="simple"></button>
-                    <span class="style-title">Simple</span>
-                </div>
-                <div class="style-container">
-                    <button type="button" class="style-option" data-style="classic"></button>
-                    <span class="style-title">Classic</span>
-                </div>
-                <div class="style-container">
-                    <button type="button" class="style-option" data-style="modern"></button>
-                    <span class="style-title">Modern</span>
-                </div>
-                <div class="style-container">
-                    <button type="button" class="style-option" data-style="islamic"></button>
-                    <span class="style-title">Islamic</span>
-                </div>
-                <div class="style-container">
-                    <button type="button" class="style-option" data-style="fun"></button>
-                    <span class="style-title">Fun</span>
-                </div>
-                <div class="style-container">
-                    <button type="button" class="style-option" data-style="elegant"></button>
-                    <span class="style-title">Special</span>
-                </div>
-            </div>
-            
-            <div class="payment-section">
-              <h3>Add Number <span>(one or both)</span></h3>
-                <div class="payment-options">
-                <div class="form-group">
-                    <input type="tel" id="bkashNumber" pattern="[0-9]{11}" maxlength="11">
-                    <label for="bkashNumber">BKash Number</label>
-                    <span class="bar"></span>
-                    <div class="payment-icon">
-                      <i>
-                        <img src="assets/ico/bkash.svg" alt="">
-                      </i>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <input type="tel" id="nagadNumber" pattern="[0-9]{11}" maxlength="11">
-                    <label for="nagadNumber">Nagad Number</label>
-                    <span class="bar"></span>
-                    <div class="payment-icon">
-                      <i>
-                        <img src="assets/ico/nagad.svg" alt="">
-                      </i>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <div class="navigation-buttons">
-                <button type="button" class="btn-prev" id="backToDetails">
-                <i class="fas fa-arrow-left"></i> Previous
-                </button>
-                <button type="button" class="btn-next" id="generateCard">
-                Generate <i class="fas fa-magic"></i>
-                </button>
-            </div>
-            </div>
-            
-            <div class="emoji-background">
-            <span>🌙</span>
-            <span>🕌</span>
-            <span>🌟</span>
-            <span>🦋</span>
-            <span>🌠</span>
-            </div>
-        </section>
-      
-        
-      <!-- Section 3: Share & Celebrate -->
-        <section class="card-section" id="section3">
-            <div class="progress-container">
-            <div class="progress-bar" style="width: 100%"></div>
-            <span class="progress-label">Step 3 of 3</span>
-            </div>
-            
-            <div class="celebration-container">
-            <div class="success-animation">
-                <div class="checkmark"><i class="fa-solid fa-moon"></i></div>
-                <div class="stars-celebration">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                </div>
-            </div>
-            
-            <h2 class="section-title">Eid Mubarak!</h2>
-            <p class="celebration-message">Your beautiful Eid card is ready to share</p>
-            
-            <div class="card-preview-container glass-card">
-                <div class="card-preview" id="cardPreview">
-                <!-- Dynamic content will be inserted here -->
-                </div>
-            </div>
-            
-            <div class="share-container glass-card">
-                <h3>Share Your Card</h3>
-                
-                <div class="link-box">
-                <input type="text" id="generatedLink" readonly>
-                <button id="copyLinkBtn" class="copy-btn" title="Copy to clipboard">
-                    <i class="far fa-copy"></i>
-                </button>
-                <span class="copy-feedback">Copied!</span>
-                </div>
-                
-                <div class="share-buttons">
-                <button class="share-btn whatsapp" data-platform="whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </button>
-                <button class="share-btn facebook" data-platform="facebook">
-                    <i class="fab fa-facebook"></i> Facebook
-                </button>
-                <button class="share-btn telegram" data-platform="telegram">
-                    <i class="fab fa-telegram"></i> Telegram
-                </button>
-                <button class="share-btn native" id="nativeShareBtn">
-                    <i class="fas fa-share-alt"></i> More
-                </button>
-                </div>
-            </div>
-            
-            <button id="createAnotherBtn" class="btn-reset">
-                <i class="fas fa-plus"></i> Create Another Card
-            </button>
-            <div class="footer glass-card">
-              <p>Developed by <a href="http://facebook.com/letterbox.official/" target="_blank"> Letter Box</a></p>
-              <p>&copy; 2025 Eid Card by Letter Box. All rights reserved.</p>
-            </div>
-            </div>
-            
-            <canvas id="confetti-canvas"></canvas>
-            
-            <div class="emoji-background">
-            <span>🌙</span>
-            <span>🎆</span>
-            <span>🌟</span>
-            <span>🦋</span>
-            <span>🎠</span>
-            </div>
-        </section>
-    </main>
-  </div>
-
-  <script src="assets/js/main.js"></script>
-  <script src="assets/ai.js"></script>
-  <script>
-  const styleButtons = document.querySelectorAll('.style-option');
-  const paymentSection = document.querySelector('.payment-section');
-
-  styleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedStyle = button.getAttribute('data-style');
-
-      if (selectedStyle === 'elegant') {
-        paymentSection.style.display = 'none';
-      } else {
-        paymentSection.style.display = 'block';
-      }
-    });
-  });
-</script>
-
+    </footer>
 </body>
 </html>
